@@ -11,11 +11,11 @@
          bootstrap="./framework/bootstrap.php"
         >
     <testsuite name="Skywire">
-        <directory>../../../app/code/Skywire/*/Test/Unit</directory>
-        <directory>../../../vendor/Skywire/*/src/Test/Unit</directory>
+        <directory suffix="Test.php">../../../app/code/Skywire/*/Test/Unit</directory>
+        <directory suffix="Test.php">../../../vendor/skywire/*/src/Test/Unit</directory>
     </testsuite>
     <php>
-        <ini name="date.timezone" value="America/Los_Angeles"/>
+        <ini name="date.timezone" value="America/Los_Angeles"/>`
         <ini name="xdebug.max_nesting_level" value="200"/>
     </php>
     <filter>
