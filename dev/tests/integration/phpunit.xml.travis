@@ -14,6 +14,7 @@
     <testsuites>
         <testsuite name="Skywire">
             <directory>../../../app/code/Skywire/*/Test/Integration</directory>
+                              <directory>../../../vendor/Skywire/*/src/Test/Integration</directory>
         </testsuite>
     </testsuites>
     <!-- Code coverage filters -->
