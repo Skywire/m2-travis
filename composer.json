@@ -4,8 +4,9 @@
   "type": "library",
   "scripts": {
     "post-package-install": [
-      "cp -r -n dev/* ../../../dev",
-      "cp -n .travis.yml ../../../.travis.yml"
+      "touch ./skywire.travis.installed.flag",
+      "cp -r -n vendor/skywire/dev/* ./dev",
+      "cp -n .vendor/skywire/travis.yml ./travis.yml"
     ]
   }
 }
