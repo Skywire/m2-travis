@@ -1,0 +1,11 @@
+{
+  "name": "skywire/travis",
+  "description": "Travis files for M2 sites and modules",
+  "type": "library",
+  "scripts": {
+    "post-package-install": [
+      "cp -r -n dev/* ../../../dev",
+      "cp -n .travis.yml ../../../.travis.yml"
+    ]
+  }
+}
