@@ -3,7 +3,12 @@
   "description": "Travis files for M2 sites and modules",
   "type": "library",
   "scripts": {
-    "post-package-install": [
+    "post-install-cmd": [
+      "touch ./skywire.travis.installed.flag",
+      "cp -r -n vendor/skywire/dev/* ./dev",
+      "cp -n .vendor/skywire/travis.yml ./travis.yml"
+    ],
+    "post-update-cmd": [
       "touch ./skywire.travis.installed.flag",
       "cp -r -n vendor/skywire/dev/* ./dev",
       "cp -n .vendor/skywire/travis.yml ./travis.yml"
