@@ -17,6 +17,7 @@ env:
   matrix:
     - TEST_SUITE=unit
     - TEST_SUITE=integration INTEGRATION_INDEX=1
+    - TEST_SUITE=api-functional
 cache:
   apt: true
   directories: $HOME/.composer/cache

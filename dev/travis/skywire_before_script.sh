@@ -20,18 +20,16 @@ case $TEST_SUITE in
 
         cd ../../..
         ;;
-    static)
-        cd dev/tests/static
+    api-functional)
+        cd dev/tests/api-functional
 
-        echo "==> preparing changed files list"
-        changed_files_ce="$TRAVIS_BUILD_DIR/dev/tests/static/testsuite/Magento/Test/_files/changed_files_ce.txt"
-        php get_github_changes.php \
-            --output-file="$changed_files_ce" \
-            --base-path="$TRAVIS_BUILD_DIR" \
-            --repo='https://github.com/magento/magento2.git' \
-            --branch='2.1'
-        cat "$changed_files_ce" | sed 's/^/  + including /'
-
+        # create database and move db config into place
+        mysql -uroot -e '
+            SET @@global.sql_mode = NO_ENGINE_SUBSTITUTION;
+            CREATE DATABASE magento_functional_tests;
+        '
         cd ../../..
+        # Start local web server
+        php -S 127.0.0.1:8000 -t ./pub &
         ;;
 esac
