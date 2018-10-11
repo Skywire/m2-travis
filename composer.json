@@ -2,16 +2,21 @@
   "name": "skywire/travis",
   "description": "Travis files for M2 sites and modules",
   "type": "library",
+  "require": {
+    "slowprog/composer-copy-file": "*"
+  },
   "scripts": {
     "post-install-cmd": [
-      "touch ./skywire.travis.installed.flag",
-      "cp -r -n vendor/skywire/dev/* ./dev",
-      "cp -n .vendor/skywire/travis.yml ./travis.yml"
+      "SlowProg\\CopyFile\\ScriptHandler::copy"
     ],
     "post-update-cmd": [
-      "touch ./skywire.travis.installed.flag",
-      "cp -r -n vendor/skywire/dev/* ./dev",
-      "cp -n .vendor/skywire/travis.yml ./travis.yml"
+      "SlowProg\\CopyFile\\ScriptHandler::copy"
     ]
+  },
+  "extra": {
+    "copy-file": {
+      "vendor/skywire/travis/dev": "../../../dev",
+      "vendor/skywire/travis/.travis.yml": "../../../.travis.yml"
+    }
   }
 }
