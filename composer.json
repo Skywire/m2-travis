@@ -3,7 +3,7 @@
   "description": "Travis files for M2 sites and modules",
   "type": "library",
   "require": {
-    "skywire/file-copy-plugin": "@dev"
+    "skywire/file-copy-plugin": "~1.0"
   },
   "extra": {
     "copy-file": {
