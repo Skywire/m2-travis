@@ -2,7 +2,11 @@
 
 ## Installation
 
-Copy to Magento root directory.
+`composer require skywire/travis`
+
+Commit new files to git.
+
+Files can be customised for your project, composer should not overwrite them when you run an install or update
 
 ## Usage
 
