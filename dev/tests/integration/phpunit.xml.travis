@@ -20,13 +20,15 @@
     <!-- Code coverage filters -->
     <filter>
         <whitelist addUncoveredFilesFromWhiteList="true">
-            <directory suffix=".php">../../../app/code/*</directory>
+            <directory suffix=".php">../../../app/code/Skywire</directory>
             <directory suffix=".php">../../../vendor/skywire/*</directory>
             <exclude>
+                <directory suffix=".php">../../../app/code/*</directory>
                 <directory>../../../app/code/*/*/Test</directory>
                 <directory>../../../lib/internal/*/*/Test</directory>
                 <directory>../../../lib/internal/*/*/*/Test</directory>
                 <directory>../../../setup/src/*/*/Test</directory>
+                <directory suffix=".php">../../../vendor/skywire/*/Test</directory>
             </exclude>
         </whitelist>
     </filter>
