@@ -28,7 +28,8 @@
                 <directory>../../../lib/internal/*/*/Test</directory>
                 <directory>../../../lib/internal/*/*/*/Test</directory>
                 <directory>../../../setup/src/*/*/Test</directory>
-                <directory suffix=".php">../../../vendor/skywire/*/Test</directory>
+                <directory>../../../vendor/skywire/*/Test</directory>
+                <directory>../../../vendor/skywire/testframework</directory>
             </exclude>
         </whitelist>
     </filter>
