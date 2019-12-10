@@ -2,7 +2,7 @@
 
 ## Installation
 
-`composer require skywire/travis`
+`composer require skywire/travis --dev`
 
 Commit new files to git.
 
