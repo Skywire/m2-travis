@@ -3,12 +3,22 @@
   "description": "Travis files for M2 sites and modules",
   "type": "library",
   "require": {
-    "skywire/file-copy-plugin": "~1.0"
+    "skywire/file-copy-plugin": "^1.1"
   },
   "extra": {
     "copy-file": {
-      "vendor/skywire/travis/dev": "dev",
-      "vendor/skywire/travis/.travis.yml": ".travis.yml"
+      "vendor/skywire/travis/dev/tests/integration/phpunit.xml.travis": "dev/tests/integration/phpunit.xml.travis!",
+      "vendor/skywire/travis/dev/tests/unit/phpunit.xml.travis": "dev/tests/unit/phpunit.xml.travis!",
+      "vendor/skywire/travis/dev/travis/skywire_before_install.sh": "dev/travis/skywire_before_install.sh!",
+      "vendor/skywire/travis/dev/travis/skywire_before_script.sh": "dev/travis/skywire_before_script.sh!",
+      "vendor/skywire/travis/.travis.yml": ".travis.yml!"
     }
+  },
+  "repositories": {
+    "private-packagist": {
+      "type": "composer",
+      "url": "https://repo.packagist.com/skywire/"
+    },
+    "packagist.org": false
   }
 }
